@@ -15,40 +15,43 @@ Perform a structured competitor analysis based on a local list of competitors de
 
 ## Instructions
 
-### 1. Gather Required Information
-When you invoke this skill, ensure that you:
-- **Identify the Project Folder**: Ask the user or infer which product/project they are referring to.
-- **Read the Competitors List**: Locate and read the `concorrentes.md` (or similar file like `competitors.md`) inside the project's folder to get the list of competitors to analyze. This file should contain the names, URLs, and social media handles of the competitors.
-- **Understand Analysis Criteria**: Identify what needs to be compared (e.g., pricing model, latest features, value proposition, recent marketing campaigns/social media focus, onboarding flow, target audience).
+### 1. Enforce Folder Structure & Gather Information
+When you invoke this skill, ensure that you follow this specific directory structure for the current product:
+- **Identify the Product**: Ask the user or infer which product they are referring to (e.g., `WeON`, `plataforma_rh_ia`).
+- **Setup Competitive Analysis Directory**: Ensure there is a folder at `docs/produtos/[NOME_PRODUTO]/analise_competitiva/`. If it doesn't exist, create it.
+- **Maintain the Competitors List**: Inside that folder, locate or create `concorrentes.md`. This file MUST contain a table listing all the product's competitors, including:
+  - Nome do Concorrente (Competitor Name)
+  - URLs / Social Media Handles
+  - Segmento de Atuação (The specific market segment they operate in)
+- **Identify Analysis Goal**: Understand what needs to be analyzed (e.g., pricing model, latest features, recent marketing campaigns, or a general update on all competitors on the list).
 
 ### 2. Execution Steps
 1. **Data Collection**:
-   - Parse the `concorrentes.md` file from the project's folder to retrieve the list of competitors and their details.
-   - Use the `read_url_content` tool to read their main landing pages, pricing pages, and product pages.
-   - Use the `search_web` tool to find recent news, press releases, or social media activities (e.g., "[Competitor Name] recent updates 2026", "site:linkedin.com/company/[competitor-handle]").
-   - *Note: If a specific social media page is blocked or requires authentication, rely on public news, press releases, or alternative domains to gather the requested intelligence.*
-2. **Criteria Validation**:
-   - For each competitor, evaluate the gathered data against the requested qualitative and quantitative criteria. 
-   - Look for product positioning, newly shipped features, pricing changes, and narrative shifts.
-3. **Synthesis**:
-   - Group the findings logically.
-   - Identify common trends among the competitors.
-   - Highlight any gaps or opportunities where your product can differentiate.
+   - Read the `concorrentes.md` file to identify the competitors and their specifics.
+   - Use the `search_web` and `read_url_content` tools to find recent news, landing page updates, pricing changes, or social media activities for the targeted competitor(s).
+2. **Analysis Validation**:
+   - Evaluate the gathered data against any specific criteria the user requested or standard metrics (product positioning, new features, changes in narrative).
+3. **Save Output Artifacts**:
+   - Ensure the existence of `docs/produtos/[NOME_PRODUTO]/analise_competitiva/analises_realizadas/`.
+   - Create a specific folder for the current analysis run using the current date: `docs/produtos/[NOME_PRODUTO]/analise_competitiva/analises_realizadas/[YYYY-MM-DD]/` (append a descriptive suffix if analyzing a specific competitor, e.g., `2026-03-05_competitorA`).
+   - Save all detailed findings, raw data collected, and deep-dive comparisons as separate markdown files inside this date-specific folder.
+4. **Generate Final Summary**:
+   - At the end of the process, create a final summary document named `resumo_analise.md` inside the date-specific folder. This document should synthesize everything you found and analyzed in this run.
 
-### 3. Output Format
-The output **MUST** strictly follow this structure, providing a detailed table and a comprehensive written analysis:
+### 3. Output Format for Final Summary (`resumo_analise.md`)
+The `resumo_analise.md` output **MUST** strictly follow this structure:
 
-#### 1. Executive Summary
-- 2-3 sentences summarizing the biggest moves or trends in the competitive landscape.
+#### 1. Resumo Executivo (Executive Summary)
+- 2-3 sentences summarizing the biggest moves or trends discovered during this specific analysis run.
 
-#### 2. Comparative Table
-- A comprehensive markdown table comparing the competitors directly against the key criteria to provide a quick visual comparison. Example columns: Competitor, Pricing Model, Target Audience, Key Value Prop, Recent Launches.
+#### 2. Tabela Comparativa (Comparative Table)
+- A markdown table highlighting the key findings. Example columns: Competitor, Pricing Changes, Recent Launches, Positioning Shifts.
 
-#### 3. Detailed Competitor Analysis
-For each competitor, provide a deep dive:
-- **Focus / Positioning**: How they are currently positioning themselves in the market.
-- **Recent Activity**: Specific details on notable social media campaigns, news, or feature launches over the last few months.
-- **Criteria Evaluation**: Detailed bullet points evaluating them against each of the specific criteria requested.
+#### 3. Análise Detalhada (Detailed Analysis)
+For each competitor analyzed in this run, provide a breakdown:
+- **Foco / Posicionamento**: Current market positioning.
+- **Atividade Recente**: Notable campaigns, news, or feature launches over the last few months.
+- **Avaliação de Critérios**: Bullet points evaluating them against requested specific criteria.
 
-#### 4. Strategic Recommendations
-- 2-3 actionable insights and recommendations for the PM of this project based on the competitive analysis.
+#### 4. Recomendações Estratégicas (Strategic Recommendations)
+- 2-3 actionable insights and recommendations for the Product Manager based on the current competitive analysis findings.
