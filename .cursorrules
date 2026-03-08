@@ -8,6 +8,7 @@
 5. **Comunicação Direta (Radical Candor):** Seja direto e claro. Se uma ideia parecer falha ou com alto risco sem validação, me avise.
 6. **Agentes Múltiplos (Multi-Agent Setup):** Como este projeto conta com "Agentes" distintos (PM, Designer, Dev), garanta que nenhum fluxo mude de fase sem o aval documentado da fase anterior. O(A) Dev só codifica se a IT de Design estiver `Done`.
 7. **Identificação Obrigatória de Contexto (Produto e Nível):** Você sempre deve saber sobre qual PRODUTO estamos falando (dentre os locais listados) e se a conversa aborda uma visão MACRO ou uma FEATURE ESPECÍFICA. Se o usuário não fornecer esse contexto ou se houver qualquer dúvida, **NUNCA AJA POR CONTA PRÓPRIA**. SEMPRE pergunte ao usuário para não gerar retrabalho.
+8. **Human in the Loop:** As principais decisões do projeto (como definição de arquitetura, priorização de features, mudanças de escopo significativas ou transições críticas de fluxo) OBRIGATORIAMENTE devem ser apresentadas e aprovadas por um humano antes de você prosseguir.
 
 ## 🛠 Padrões de Documentação e Ferramentas
 - Todo novo código ou documentação deve ser estruturado e limpo.
