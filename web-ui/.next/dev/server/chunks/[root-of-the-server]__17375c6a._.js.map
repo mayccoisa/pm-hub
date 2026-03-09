@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 148, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Maycon%20Rocha/.gemini/antigravity/scratch/pm-hub/web-ui/src/app/api/copilotkit/route.ts"],"sourcesContent":["import {\n  CopilotRuntime,\n  OpenAIAdapter,\n  copilotRuntimeNextJSAppRouterEndpoint,\n} from \"@copilotkit/runtime\";\nimport { NextRequest } from \"next/server\";\n\nconst serviceAdapter = new OpenAIAdapter();\nconst runtime = new CopilotRuntime();\n\nexport const POST = async (req: NextRequest) => {\n  const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({\n    runtime,\n    serviceAdapter,\n    endpoint: \"/api/copilotkit\",\n  });\n\n  return handleRequest(req);\n};\n"],"names":[],"mappings":";;;;AAAA;AAAA;AAAA;AAAA;;AAOA,MAAM,iBAAiB,IAAI,yNAAa;AACxC,MAAM,UAAU,IAAI,4MAAc;AAE3B,MAAM,OAAO,OAAO;IACzB,MAAM,EAAE,aAAa,EAAE,GAAG,IAAA,6OAAqC,EAAC;QAC9D;QACA;QACA,UAAU;IACZ;IAEA,OAAO,cAAc;AACvB"}}]
+}
