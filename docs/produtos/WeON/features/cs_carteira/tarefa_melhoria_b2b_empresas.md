@@ -36,6 +36,14 @@ Baseado no novo fluxo validado de interfaces:
    * Os Endpoints atuais de carteira (Dashboard totalizador e Tabela) precisam obrigatoriamente aceitar um novo "query_param": `?entity_mode=company`.
    * Quando o backend receber `company`, o repositório/ORM deve agrupar (GROUP BY) baseando-se no parentesco do contato (`company_id`). O cálculo relacional para 'última interação' passa a ser uma varredura nas entidades filhas.
 
+### Critérios de Aceite
+1. **Seletor de Visão:** O usuário deve conseguir visualizar e interagir com um seletor no topo da tabela para alternar entre "Visão por contatos" e "Visão por empresas".
+2. **Atualização de Cards (Totalizadores):** Ao ativar a "Visão por empresas", os indicadores de topo devem atualizar para mostrar o "Total de Empresas" e a "Proporção de Empresas Abordadas".
+3. **Agrupamento na Tabela:** A listagem principal deve refletir a Empresa na coluna de nome em vez do contato individual.
+4. **Agregação de Colunas:** A coluna "Última qualificação", "Tags" e "Avaliação/Risco" devem consolidar de maneira precisa as informações dos contatos vinculados àquela respectiva Empresa.
+5. **Integração Back-end:** A listagem deve funcionar perfeitamente requisitando o endpoint com o parâmetro `?entity_mode=company`.
+6. **Performance (SLA):** O carregamento da visão agrupada (Empresas) deve respeitar o limite de 3 segundos de resposta no load dos dados.
+
 ## 4. Implementation (Implementação)
 * **Dependências:** Modelagem correta das Foreign Keys (Contatos x Empresas) populadas no banco para as instâncias B2B.
 * **Estimativa de Tempo (T-Shirt Size):** Grande (L) - Criação de cálculos agrupados e alteração de componentes globais do Front.
