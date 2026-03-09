@@ -47,6 +47,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../../src/app/docs/[...slug]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/docs/[...slug]">> = Specific
+  const handler = {} as typeof import("../../../src/app/docs/[...slug]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../../src/app/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/">> = Specific
@@ -60,6 +69,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends RouteHandlerConfig<"/api/copilotkit">> = Specific
   const handler = {} as typeof import("../../../src/app/api/copilotkit/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../src/app/api/docs/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/docs">> = Specific
+  const handler = {} as typeof import("../../../src/app/api/docs/route.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
