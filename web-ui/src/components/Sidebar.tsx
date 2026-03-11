@@ -55,10 +55,19 @@ export const Sidebar = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("Sidebar: Fetching /api/docs...");
     fetch("/api/docs")
-      .then((res) => res.json())
+      .then((res) => {
+        console.log("Sidebar: Response status:", res.status);
+        return res.json();
+      })
       .then((data) => {
+        console.log("Sidebar: Received data:", data);
         setTree(data.tree || []);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error("Sidebar: Fetch error:", err);
         setLoading(false);
       });
   }, []);

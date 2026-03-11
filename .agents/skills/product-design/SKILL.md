@@ -55,6 +55,31 @@ Design de produto nivel Apple — sistemas visuais, UX flows, acessibilidade, li
 9. **Continuidade entre telas** — experiencia unificada
 10. **Surpresa deleitosa** — o inesperado que encanta
 
+---
+
+## Fidelidade de Wireframes (Nivel MetisBI)
+
+O nível de fidelidade define o foco da validação. Siga estas diretrizes para dashboards:
+
+### 1. Low-fi (Baixa Fidelidade)
+- **Foco**: Fluxo, estrutura e arquitetura de informação.
+- **Visual**: Desenho à mão ou digital "sketchy", tons de cinza.
+- **Uso**: Validação rápida de ideias e layout básico.
+- *Nota*: Não se preocupe com alinhamento perfeito ou ícones.
+
+### 2. Mid-fi (Média Fidelidade) - **O Padrão de Requisito**
+- **Foco**: Hierarquia visual, layout preciso e navegação.
+- **Visual**: Digital, linhas limpas, formas geométricas, sem cores (grayscale), tipografia básica, ícones placeholder.
+- **Uso**: Documentação técnica e validação de requisitos com stakeholders.
+- *Referência*: Estilo "Wireframing for Power BI Dashboards" (MetisBI).
+
+### 3. High-fi (Alta fidelidade)
+- **Foco**: Experiência visual final, branding e acessibilidade.
+- **Visual**: Design final, cores do Design System, imagens reais, tipografia final, micro-interações.
+- **Uso**: Hand-off para desenvolvimento e testes de usabilidade finais.
+
+---
+
 ## Design Cognitivo
 
 - **Carga cognitiva zero** — o usuario nunca deve pensar
