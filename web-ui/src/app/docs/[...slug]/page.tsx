@@ -4,8 +4,9 @@ import remarkGfm from "remark-gfm";
 import { getDocContent } from "@/lib/docs";
 import { notFound } from "next/navigation";
 
-export default async function DocPage({ params }: { params: { slug: string[] } }) {
-  const content = getDocContent(params.slug);
+export default async function DocPage({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const content = getDocContent(slug);
 
   if (!content) {
     notFound();

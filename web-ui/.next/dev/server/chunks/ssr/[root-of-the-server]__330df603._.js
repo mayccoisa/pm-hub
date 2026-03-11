@@ -135,7 +135,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 async function DocPage({ params }) {
-    const content = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$docs$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getDocContent"])(params.slug);
+    const { slug } = await params;
+    const content = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$docs$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getDocContent"])(slug);
     if (!content) {
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["notFound"])();
     }
@@ -150,17 +151,17 @@ async function DocPage({ params }) {
                 children: content
             }, void 0, false, {
                 fileName: "[project]/src/app/docs/[...slug]/page.tsx",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/app/docs/[...slug]/page.tsx",
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/docs/[...slug]/page.tsx",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }

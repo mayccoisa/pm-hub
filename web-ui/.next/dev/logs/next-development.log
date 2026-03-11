@@ -1,10 +1,14 @@
-[00:00:03.004] Server  LOG     ✓ Ready in 2.2s
-[00:00:07.357] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:03:28.748] Server  LOG     ○ Compiling /docs/[...slug] ...
-[00:03:55.129] Server  WARN    Error: Route "/docs/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:03:55.192] Server  WARN    Error: Route "/docs/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:03:55.247] Server  WARN    Error: Route "/docs/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
-[00:03:55.314] Server  ERROR   ⨯ TypeError: slug is not iterable (cannot read property undefined)
-[00:03:55.331] Server  ERROR   ⨯ TypeError: slug is not iterable (cannot read property undefined)
-[00:03:55.342] Server  ERROR   ⨯ TypeError: slug is not iterable (cannot read property undefined)
-[00:03:55.793] Browser ERROR   uncaughtError: TypeError: slug is not iterable (cannot read property undefined)
+[00:00:04.554] Server  LOG     ✓ Ready in 3.5s
+[00:00:54.101] Server  LOG     ○ Compiling / ...
+[00:01:01.949] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:08.820] Server  LOG     ○ Compiling /api/docs ...
+[00:01:56.285] Server  WARN    Error: Route "/docs/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:01:56.330] Server  ERROR   ⨯ TypeError: slug is not iterable (cannot read property undefined)
+[00:01:56.619] Browser ERROR   uncaughtError: TypeError: slug is not iterable (cannot read property undefined)
+[00:04:07.581] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:14.965] Server  WARN    Error: Route "/docs/[...slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[00:04:15.001] Server  ERROR   ⨯ TypeError: slug is not iterable (cannot read property undefined)
+[00:04:15.252] Browser ERROR   uncaughtError: TypeError: slug is not iterable (cannot read property undefined)
+[00:05:47.778] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:56.133] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:16.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
